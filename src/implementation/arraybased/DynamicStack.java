@@ -1,9 +1,8 @@
-package implementation.dynamicize;
+package implementation.arraybased;
 
 import implementation.stackExceptions.MyStackEmptyException;
 
 import java.util.ArrayList;
-import java.util.EmptyStackException;
 
 public class DynamicStack {
     private ArrayList<Integer> al;

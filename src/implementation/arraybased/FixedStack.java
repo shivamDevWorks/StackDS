@@ -1,4 +1,4 @@
-package implementation.fixedSize;
+package implementation.arraybased;
 
 import implementation.stackExceptions.MyStackEmptyException;
 import implementation.stackExceptions.MyStackOverflowException;
