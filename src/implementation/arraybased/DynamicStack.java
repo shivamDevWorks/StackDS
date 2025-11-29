@@ -1,5 +1,6 @@
 package implementation.arraybased;
 
+import implementation.Constants;
 import implementation.stackExceptions.MyStackEmptyException;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class DynamicStack {
     public int pop(){
 
         if(al.isEmpty()){
-            throw new MyStackEmptyException("DynamicStack ::Stack is empty! Invalid pop operation");
+            throw new MyStackEmptyException(Constants.EMPTY_STACK_POP_OPERATION_ERROR);
         }
         int top=al.get(al.size()-1);
         al.remove(al.size()-1);
@@ -35,7 +36,7 @@ public class DynamicStack {
 
     public int peek(){
         if(al.isEmpty()){
-            throw new MyStackEmptyException("DynamicStack ::Stack is empty! Invalid peek() operation.");
+            throw new MyStackEmptyException(Constants.EMPTY_STACK_PEEK_OPERATION_ERROR);
         }
         return al.get(al.size()-1);
     }
