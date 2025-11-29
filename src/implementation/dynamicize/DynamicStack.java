@@ -5,10 +5,10 @@ import implementation.stackExceptions.MyStackEmptyException;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
 
-public class MyStack {
+public class DynamicStack {
     private ArrayList<Integer> al;
 
-    public MyStack(){
+    public DynamicStack(){
         al=new ArrayList<>();
     }
 
@@ -16,10 +16,10 @@ public class MyStack {
         al.add(x);
     }
 
-    public int pop() throws MyStackEmptyException {
+    public int pop(){
 
         if(al.isEmpty()){
-            throw new MyStackEmptyException("Stack is empty! Invalid pop operation");
+            throw new MyStackEmptyException("DynamicStack ::Stack is empty! Invalid pop operation");
         }
         int top=al.get(al.size()-1);
         al.remove(al.size()-1);
@@ -34,9 +34,9 @@ public class MyStack {
         return al.size();
     }
 
-    public int peek() throws MyStackEmptyException{
+    public int peek(){
         if(al.isEmpty()){
-            throw new MyStackEmptyException("Stack is empty! Invalid peek() operation.");
+            throw new MyStackEmptyException("DynamicStack ::Stack is empty! Invalid peek() operation.");
         }
         return al.get(al.size()-1);
     }
